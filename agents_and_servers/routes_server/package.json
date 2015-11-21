@@ -1,0 +1,18 @@
+{
+  "name": "routes_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "finalhandler": "^0.4.0",
+    "firmata": "^0.8.0",
+    "johnny-five": "^0.9.11",
+    "morgan": "^1.6.1",
+    "router": "^1.1.3"
+  }
+}
