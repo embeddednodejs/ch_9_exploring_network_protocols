@@ -12,7 +12,6 @@ var board = new five.Board({
     repl: false
 });
 
-/*
 board.on("ready", function() {
   var led = new five.Led(13);
   var slider = new five.Sensor("A1");
@@ -21,21 +20,27 @@ board.on("ready", function() {
   // now startup server
   startupServer(slider);
 });
-*/
 
-var slider;
-startupServer(slider);
+/*
+  // use without board connected
+  var slider;
+  startupServer(slider);
+*/
 
 function startupServer(slider) {
   var dnode = require('dnode');
   var net = require('net');
 
+  var lastValue;
+  slider.on('slide', function(d) {
+    lastValue = d;
+  });
+
   var server = net.createServer(function(conn) {
 
     var objects = dnode({
       getState: function(cb) {
-        var data = 123;
-        cb(data);
+        cb(lastValue);
       }
     });
     

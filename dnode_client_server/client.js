@@ -11,5 +11,4 @@ objects.on('remote', function (remote) {
 
 
 var conn = net.connect(port);
-process.stdin.pipe(conn);
 conn.pipe(objects).pipe(conn);
