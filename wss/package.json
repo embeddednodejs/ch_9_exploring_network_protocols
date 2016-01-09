@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "galileo-io": "^0.8.18",
-    "johnny-five": "^0.9.12",
+    "johnny-five": "^0.9.17",
     "ws": "^0.8.1"
   }
 }
