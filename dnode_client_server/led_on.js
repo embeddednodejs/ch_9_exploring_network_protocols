@@ -4,11 +4,9 @@ var port = 4000;
 
 var objects = dnode();
 objects.on('remote', function (remote) {
-  remote.getState(function(data) {
-    console.log(data);
-  });
+  remote.ledOn();
 });
 
 
-var conn = net.connect(port);
+var conn = net.connect(port, '192.168.3.102');
 conn.pipe(objects).pipe(conn);
