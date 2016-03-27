@@ -1,0 +1,17 @@
+{
+  "name": "hello_weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "johnny-five": "^0.9.35",
+    "weather": "^0.1.0",
+    "weather-js": "^1.0.2"
+  }
+}
